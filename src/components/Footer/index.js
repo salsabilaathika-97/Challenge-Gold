@@ -2,35 +2,31 @@ import React from "react";
 import { binar_icon } from "../../asset";
 
 const Footer = () => {
+    const menuList = ["Our Services", "Why Us", "Testimonial", "FAQ"]
+    const contactList = ["Jalan Suroyo No. 161 Mayangan Kota Probolonggo 672000", "binarcarrental@gmail.com", "081-233-334-808"]
     return (
         <>
             <footer class="text-center lg:text-left bg-white text-black">
                 <div class="mx-6 py-10 text-center md:text-left">
                     <div class="grid grid-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
                         <div class="font-bold">
-                            <p class = "mb-4">
-                                Jalan Suroyo No. 161 Mayangan Kota Probolonggo 672000
-                            </p>
-                            <p class = "mb-4">
-                                binarcarrental@gmail.com
-                            </p>
-                            <p class = "mb-4">
-                                081-233-334-808
-                            </p>
+                            
+                                {
+                                    contactList.map((item) => (
+                                        <p class = "mb-4">
+                                            <a href="#!">{item}</a>
+                                        </p>
+                                    ))
+                                }
                         </div>
                         <div class="">
-                            <p class="mb-4">
-                                <a href="#!">Our Services</a>
-                            </p>
-                            <p class="mb-4">
-                                <a href="#!">Why Us</a>
-                            </p>
-                            <p class="mb-4">
-                                <a href="#!">Testimonial</a>
-                            </p>
-                            <p>
-                                <a href="#!">FAQ</a>
-                            </p>
+                                {
+                                    menuList.map((item) => (
+                                        <p class="mb-4">
+                                        <a href="#!">{item}</a>
+                                        </p>
+                                    ))
+                                }
                         </div>
                         <div class="">
                             <h6 class="font-bold mb-4 flex justify-center md:justify-start">
