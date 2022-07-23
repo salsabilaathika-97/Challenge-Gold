@@ -1,7 +1,19 @@
+import "./style.css"
+
 const Navbar = () => {
+    const navList = ["Our Services", "Why Us", "Testimonial", "FAQ"]
     return (
-        <div>
-            <h1>Navbar</h1>
+        <div className="navbar-body">
+            <div className="navbar-row">
+
+            </div>
+            <div className="nav-list">
+                {
+                    navList.map((item) => (
+                        <p>{item}</p>
+                    ))
+                }
+            </div>
         </div>
     )
 }

@@ -1,0 +1,42 @@
+.navbar-row {
+    display: flex;
+    justify-content: space-around;
+    position: absolute;
+    width: 100px;
+    height: 34px;
+    left: 136px;
+    top: 25px;
+    background: #0D28A6;
+}
+
+.nav-list {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0px;
+    gap: 32px;
+
+    position: absolute;
+    width: 327px;
+    height: 20px;
+    left: 864px;
+    top: 24px;
+}
+
+.nav-list p {
+    font-family: Arial, Helvetica, sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+}
+
+.navbar-body {
+    display: flex;
+    position: absolute;
+    width: 1440px;
+    height: 80px;
+    left: 0px;
+    top: 0px;
+    background: #F1F3FF;
+}
