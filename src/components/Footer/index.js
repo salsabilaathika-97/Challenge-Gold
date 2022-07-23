@@ -14,7 +14,7 @@ const Footer = () => {
                                 {
                                     contactList.map((item) => (
                                         <p class = "mb-4">
-                                            <a href="#!">{item}</a>
+                                           {item}
                                         </p>
                                     ))
                                 }
