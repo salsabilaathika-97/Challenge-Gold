@@ -1,7 +1,11 @@
+import Navbar from "../../components/Navbar";
+import Footer from "../../components/Footer";
+
 const DetailCar = () => {
     return (
         <div>
-            <h1>Ini detail car page</h1>
+            <Navbar />
+            <Footer />
         </div>
     )
 }
