@@ -9,10 +9,16 @@ import axios from 'axios';
 const Cars = () => {
     const [data, setData] = useState([]);
 
-    useEffect( () => {
-        axios.get('https://bootcamp-rent-car.herokuapp.com/admin/car').then(res => console.log(res)).catch((err) => console.log(err)); 
-        // const res = await axios.get('https://bootcamp-rent-car.herokuapp.com/admin/car')
-    });
+    useEffect(() => {
+        axios
+          .get("https://bootcamp-rent-car.herokuapp.com/admin/car")
+          .then((res) => setData(res.data))
+          .catch((err) => console.log(err));
+      }, []);
+
+    // const getData = async () => {
+    //     const res = await axios.get('https://bootcamp-rent-car.herokuapp.com/admin/car')
+    // }
 
     const styles = {
         container01 : {
