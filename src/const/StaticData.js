@@ -29,4 +29,21 @@ const InfoCardList = [
     }
 ]
 
-export {CheckItemList, InfoCardList}
+const HeaderList = [
+    {
+        "id": "0",
+        "header": 'Apa saja syarat yang dibutuhkan?'}, 
+    {
+        "id": "1",
+        "header":'Berapa hari minimal sewa mobil lepas kunci?'},
+    {     
+        "id" : "2",
+        "header":'Berapa hari sebelumnya sebaiknya booking sewa mobil?'}, 
+    {    
+        "id" : "3",
+        "header":'Apakah ada biaya antar jemput?'}, 
+    {
+        "id" : "4",    
+        "header":'Bagaimana jika terjadi kecelakaan?'}]
+
+export {CheckItemList, InfoCardList, HeaderList}
