@@ -1,9 +1,8 @@
 import React from "react";
 import { binar_icon } from "../../asset";
+import { menuList, contactList } from "../../const/StaticData";
 
-const Footer = () => {
-    const menuList = ["Our Services", "Why Us", "Testimonial", "FAQ"]
-    const contactList = ["Jalan Suroyo No. 161 Mayangan Kota Probolonggo 672000", "binarcarrental@gmail.com", "081-233-334-808"]
+const Footer = () => { 
     return (
         <>
             <footer class="text-center lg:text-left bg-white text-black">
