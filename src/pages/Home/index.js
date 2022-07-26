@@ -8,6 +8,7 @@ import { colors } from "../../utils";
 import { Button } from 'react-bootstrap';
 import { CheckItemList, InfoCardList } from '../../const/StaticData';
 import CTA_Banner from '../../components/CTA_Banner';
+import Accordion from '../../components/Accordion';
 
 const Home = () => {
     const styles = {
@@ -79,6 +80,17 @@ const Home = () => {
             </div>
             <div className='row'>
                 <CTA_Banner />
+            </div>
+            <div className='row'>
+                <div className='col-sm-5' style={{display: 'flex', padding: 54, alignItems: 'center', justifyContent: 'end'}}>
+                    <div style={{ maxWidth: 468}}>
+                        <div style = {{ fontFamily: 'arial', fontSize: 24, fontWeight: 700, fontStyle: 'normal' }}>Frequently Asked Questions</div>
+                        <div style = {{ fontFamily: 'arial', fontSize: 14, fontWeight: 700, fontStyle: 'normal', marginTop: 16 }}>Lorem ipsum dolor sit amet, consectetur adipiscing elit</div>
+                    </div>
+                </div>
+                <div className='col-sm-5' style={{display: 'flex', padding: 54, alignItems: 'center', justifyContent: 'end'}}>
+                    <Accordion />
+                </div>
             </div>
             </div>
             <Footer />
