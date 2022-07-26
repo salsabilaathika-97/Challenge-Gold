@@ -23,7 +23,7 @@ const Footer = () => {
                                 {
                                     menuList.map((item) => (
                                         <p class="mb-4">
-                                        <a href="#!">{item}</a>
+                                        <a class ="text text-black" href="#!">{item}</a>
                                         </p>
                                     ))
                                 }
