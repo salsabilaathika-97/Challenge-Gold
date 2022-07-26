@@ -3,8 +3,16 @@ import Footer from "../../components/Footer";
 import { colors } from "../../utils";
 import { img_car } from "../../asset";
 import { Button, Form } from "react-bootstrap";
+import { useEffect, useState } from "react";
+import axios from 'axios';
 
 const Cars = () => {
+    const [data, setData] = useState([]);
+
+    useEffect(() => {
+        axios.get('https://bootcamp-rent-car.herokuapp.com/admin/car').then(res => console.log(res)).catch((err) => console.log(err)); 
+    });
+
     const styles = {
         container01 : {
             backgroundColor: colors.bgMainPage01,
