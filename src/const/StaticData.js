@@ -57,4 +57,23 @@ const contactList = [
     "binarcarrental@gmail.com", 
     "081-233-334-808"]
 
-export {CheckItemList, InfoCardList, HeaderList, menuList, contactList}
+const navList = [
+    {
+        "id" : "#our-service",
+        "text" : "Our Services"
+    },
+    {
+        "id" : "#why-us",
+        "text" : "Why Us"
+    },
+    {
+        "id" : "#testimonial",
+        "text" : "Testimonial"
+    },
+    {
+        "id" : "#faq",
+        "text" : "FAQ"
+    }
+]
+
+export {CheckItemList, InfoCardList, HeaderList, menuList, contactList, navList}

@@ -49,7 +49,7 @@ const Home = () => {
                 </div>
             </div>
             <div style = {styles.container02}>
-            <div className='row'>
+            <div id = "our-service" className='row'>
                 <div className='col-md-6' style={{display: 'flex', padding: 54, alignItems: 'center', justifyContent: 'end'}}>
                     <img src={ILWoman} style={{width: '100%', maxWidth: 459, maxHeight: 428}} alt='Woman service' />
                 </div>
@@ -65,7 +65,7 @@ const Home = () => {
                     </div>
                 </div>
             </div>
-            <div className='row'>
+            <div id = "why-us" className='row'>
                 <div className='col-12' style={{display: 'flex', alignItems: 'start', justifyContent: 'center'}}>
                     <div style={{display: 'flex', alignItems: 'start', justifyContent: 'center', flexDirection:'column'}}>
                         <div style={{paddingRight: 16, paddingLeft: 16}}>
@@ -82,13 +82,13 @@ const Home = () => {
                     </div>
                 </div>
             </div>
-            <div className='row'>
+            <div id = "testimonial" className='row'>
                 {/* <Testimonial /> */}
             </div>
             <div className='row'>
                 <CTA_Banner />
             </div>
-            <div className='row'>
+            <div id = "faq" className='row'>
                 <div className='col-sm-5' style={{display: 'flex', padding: 54, alignItems: 'center', justifyContent: 'end'}}>
                     <div style={{ maxWidth: 468}}>
                         <div style = {{ fontFamily: 'arial', fontSize: 24, fontWeight: 700, fontStyle: 'normal' }}>Frequently Asked Questions</div>

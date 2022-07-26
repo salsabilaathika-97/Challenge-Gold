@@ -1,16 +1,15 @@
 import "./style.css"
+import { navList } from "../../const/StaticData";
 
-const Navbar = () => {
-    const navList = ["Our Services", "Why Us", "Testimonial", "FAQ"]
+const Navbar = () => {   
     return (
         <div className="navbar-body">
             <div className="navbar-row">
-
             </div>
             <div className="nav-list">
                 {
                     navList.map((item) => (
-                        <p>{item}</p>
+                        <a href = {item.id}>{item.text}</a>
                     ))
                 }
             </div>
