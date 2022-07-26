@@ -1,6 +1,6 @@
 import React from "react";
 import { binar_icon } from "../../asset";
-import { menuList, contactList } from "../../const/StaticData";
+import { navList, contactList } from "../../const/StaticData";
 
 const Footer = () => { 
     return (
@@ -20,9 +20,9 @@ const Footer = () => {
                         </div>
                         <div class="">
                                 {
-                                    menuList.map((item) => (
+                                    navList.map((item) => (
                                         <p class="mb-4">
-                                        <a class ="text text-black" href="#!">{item}</a>
+                                        <a class ="text text-black" href={item.id}>{item.text}</a>
                                         </p>
                                     ))
                                 }
