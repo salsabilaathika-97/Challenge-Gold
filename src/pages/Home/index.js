@@ -7,6 +7,7 @@ import { img_car, ILWoman } from "../../asset";
 import { colors } from "../../utils";
 import { Button } from 'react-bootstrap';
 import { CheckItemList, InfoCardList } from '../../const/StaticData';
+import CTA_Banner from '../../components/CTA_Banner';
 
 const Home = () => {
     const styles = {
@@ -75,6 +76,9 @@ const Home = () => {
                         </div>
                     </div>
                 </div>
+            </div>
+            <div className='row'>
+                <CTA_Banner />
             </div>
             </div>
             <Footer />
