@@ -3,9 +3,10 @@ import Navbar from "../../components/Navbar";
 import Footer from "../../components/Footer";
 import CheckItem from '../../components/CheckItem';
 import InfoCard from '../../components/InfoCard';
-import { img_car, ILWoman, Icon24, IconProfessional, IconPrice, IconComplete } from "../../asset";
+import { img_car, ILWoman } from "../../asset";
 import { colors } from "../../utils";
 import { Button } from 'react-bootstrap';
+import { CheckItemList, InfoCardList } from '../../const/StaticData';
 
 const Home = () => {
     const styles = {
@@ -50,11 +51,11 @@ const Home = () => {
                     <div style={{margin: 16, maxWidth: 468}}>
                         <div style={{fontFamily: 'arial', fontSize: 24, fontWeight: 700, fontStyle: 'normal'}}>Sewa & Rental Mobil Terbaik di kawasan (Lokasimu)</div>
                         <div style={{fontFamily: 'arial', fontSize: 14, fontWeight: 700, fontStyle: 'normal', marginTop: 24}} >Sewa mobil di (Lokasimu) bersama Binar Car Rental jaminan harga lebih murah dibandingkan yang lain, kondisi mobil baru, serta kualitas pelayanan terbaik untuk perjalanan wisata, bisnis, wedding, meeting, dll.</div>
-                        <CheckItem text={'Sewa Mobil Dengan Supir di Bali 12 Jam'} />
-                        <CheckItem text={'Sewa Mobil Lepas Kunci di Bali 24 Jam'} />
-                        <CheckItem text={'Sewa Mobil Jangka Panjang Bulanan'} />
-                        <CheckItem text={'Gratis Antar - Jemput Mobil di Bandara'} />
-                        <CheckItem text={'Layanan Airport Transfer / Drop In Out'} />
+                        {
+                            CheckItemList.map((item) => (
+                                <CheckItem text = {item} />
+                            ))
+                        }
                     </div>
                 </div>
             </div>
@@ -66,10 +67,11 @@ const Home = () => {
                             <div style={{fontFamily: 'arial', fontSize: 14, fontWeight: 700, fontStyle: 'normal', marginTop: 16}}>Mengapa harus pilih Binar Car Rental ?</div>
                         </div>
                         <div style={{display: 'flex', flexDirection: 'row', flexWrap: 'wrap', marginTop: 8, marginBottom: 40}}>
-                            <InfoCard icon={IconComplete} title={'Mobil Lengkap'} bodyText={'Tersedia banyak pilihan mobil, kondisi masih baru, bersih dan terawat'}/>
-                            <InfoCard icon={IconPrice} title={'Harga Murah'} bodyText={'Harga murah dan bersaing, bisa bandingkan harga kami dengan rental mobil lain'}/>
-                            <InfoCard icon={Icon24} title={'Layanan 24 Jam'} bodyText={'Siap melayani kebutuhan Anda selama 24 jam nonstop. Kami juga tersedia di akhir minggu'}/>
-                            <InfoCard icon={IconProfessional} title={'Sopir Profesional'} bodyText={'Sopir yang profesional, berpengalaman, jujur, ramah dan selalu tepat waktu'}/>
+                            {
+                                InfoCardList.map((item) => (
+                                    <InfoCard icon = {item.icon} title = {item.title} bodyText = {item.bodytext} />
+                                ))
+                            }
                         </div>
                     </div>
                 </div>
