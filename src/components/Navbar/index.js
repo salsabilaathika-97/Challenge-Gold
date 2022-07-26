@@ -9,7 +9,7 @@ const Navbar = () => {
             <div className="nav-list">
                 {
                     navList.map((item) => (
-                        <a href = {item.id}>{item.text}</a>
+                        <a class ="text text-black" href = {item.id}>{item.text}</a>
                     ))
                 }
             </div>

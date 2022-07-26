@@ -46,12 +46,6 @@ const HeaderList = [
         "id" : "4",    
         "header":'Bagaimana jika terjadi kecelakaan?'}]
 
-const menuList = [
-    "Our Services", 
-    "Why Us", 
-    "Testimonial", 
-    "FAQ"]
-
 const contactList = [
     "Jalan Suroyo No. 161 Mayangan Kota Probolonggo 672000", 
     "binarcarrental@gmail.com", 
@@ -76,4 +70,4 @@ const navList = [
     }
 ]
 
-export {CheckItemList, InfoCardList, HeaderList, menuList, contactList, navList}
+export {CheckItemList, InfoCardList, HeaderList, contactList, navList}
