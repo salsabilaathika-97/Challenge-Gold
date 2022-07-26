@@ -29,7 +29,7 @@ const Home = () => {
                         <div style={{maxWidth: 568}}>
                             <div style={{fontFamily: 'arial', fontSize: 36, fontWeight: 700, fontStyle: 'normal'}}>Sewa & Rental Mobil Terbaik di kawasan (Lokasimu)</div>
                             <div style={{fontFamily: 'arial', fontSize: 14, fontWeight: 700, fontStyle: 'normal', marginTop: 16}} >Selamat datang di Binar Car Rental. Kami menyediakan mobil kualitas terbaik dengan harga terjangkau. Selalu siap melayani kebutuhanmu untuk sewa mobil selama 24 jam.</div>
-                            <Button variant="primary" style={{marginTop: 16}} >Mulai Sewa Mobil</Button>
+                            <Button variant="success" style={{marginTop: 16}} >Mulai Sewa Mobil</Button>
                         </div>
                     </div>
                     <div className='col-md-6' style={{display: 'flex', paddingLeft: 16, paddingRight: 0, position: 'relative'}}>
