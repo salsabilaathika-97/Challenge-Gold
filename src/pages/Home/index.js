@@ -9,6 +9,7 @@ import { Button } from 'react-bootstrap';
 import { CheckItemList, InfoCardList } from '../../const/StaticData';
 import CTA_Banner from '../../components/CTA_Banner';
 import FAQ from '../../components/FAQ';
+import Testimonial from '../../components/Testimonial';
 
 const Home = () => {
     const styles = {
@@ -77,6 +78,9 @@ const Home = () => {
                         </div>
                     </div>
                 </div>
+            </div>
+            <div className='row'>
+                {/* <Testimonial /> */}
             </div>
             <div className='row'>
                 <CTA_Banner />
