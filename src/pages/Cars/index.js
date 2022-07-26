@@ -5,6 +5,7 @@ import { img_car } from "../../asset";
 import { Button, Form } from "react-bootstrap";
 import { useEffect, useState } from "react";
 import axios from 'axios';
+import { Link } from "react-router-dom";
 
 const Cars = () => {
     const [data, setData] = useState([]);
@@ -89,6 +90,9 @@ const Cars = () => {
                             <div>
                                 <h1>{item.name}</h1>
                                 <p>{item.price}</p>
+                                <Link to = {`/detailmobil/${item.id}`}>
+                                <button>Pilih Mobil</button>
+                                </Link>
                             </div>
                             </div>
                         ))
