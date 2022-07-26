@@ -16,10 +16,6 @@ const Cars = () => {
           .catch((err) => console.log(err));
       }, []);
 
-    // const getData = async () => {
-    //     const res = await axios.get('https://bootcamp-rent-car.herokuapp.com/admin/car')
-    // }
-
     const styles = {
         container01 : {
             backgroundColor: colors.bgMainPage01,
