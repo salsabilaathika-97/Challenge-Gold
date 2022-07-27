@@ -23,7 +23,12 @@ const Cars = () => {
             height: 'auto',
             overflowX: 'hidden',
             paddingTop: 97
-        }
+        },
+        container02 : {
+            backgroundColor: colors.bgMainPage02,
+            height: 'auto',
+            overflowX: 'hidden'
+        },
     };
     return (
         <div>
@@ -80,24 +85,30 @@ const Cars = () => {
                     </Form>
                 </div>
                 </div>
-                {
-                    !!data.length && (
-                        data.map(item => (
-                            <div>
-                            <div>
-                                <img src = {item.image} />
-                            </div>
-                            <div>
-                                <h1>{item.name}</h1>
-                                <p>{item.price}</p>
-                                <Link to = {`/detailmobil/${item.id}`}>
-                                <button>Pilih Mobil</button>
-                                </Link>
-                            </div>
-                            </div>
-                        ))
-                    )
-                }
+                <div style = {styles.container02}>
+                <div className='row' style = {{ padding: 10 }}>
+                    <div className='col' style={{display: 'flex', flexDirection: 'row', flexWrap: 'wrap', marginTop: 8, marginBottom: 40}}>
+                        {
+                            !!data.length && (
+                                data.map(item => (
+                                    <div style = {{ padding: 10 }}>
+                                    <div class="card" style={{ width: 250, height: 300 }}>
+                                        <img src ={item.image} alt = "item-image" />
+                                        <div class = "card-body">
+                                            <h5 class = "card-title">{item.name}</h5>
+                                            <p class = "card-text">{item.price}</p>
+                                            <Link to = {`/detailmobil/${item.id}`}>
+                                                <Button variant = "success">Pilih Mobil</Button>
+                                            </Link>
+                                        </div>
+                                    </div>
+                                    </div>
+                                ))
+                            )
+                        }
+                    </div>
+                </div>
+                </div>
             <Footer />
         </div>
     )
