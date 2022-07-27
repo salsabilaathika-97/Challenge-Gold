@@ -5,6 +5,8 @@ import { useParams } from "react-router-dom";
 import axios from 'axios';
 import {useEffect, useState} from "react";
 import { Button, Form } from "react-bootstrap";
+import { includeList, excludeList } from "../../const/StaticData";
+import CheckItem from "../../components/CheckItem";
 
 const DetailCar = () => {
     const [car, setCar] = useState([]);
@@ -24,7 +26,12 @@ const DetailCar = () => {
             height: 'auto',
             overflowX: 'hidden',
             paddingTop: 97
-        }
+        },
+        container02 : {
+            backgroundColor: colors.bgMainPage02,
+            height: 'auto',
+            overflowX: 'hidden'
+        },
     };
 
     return (
@@ -71,17 +78,49 @@ const DetailCar = () => {
                     </fieldset>
                 </div>
                 </div>
-                {
-                !!Object.keys(car).length && (
-                    
-                        <div>
-                            <img src = {car.image} />
-                           <p>{car.name}</p>
-                           <p>{car.price}</p>
+                <div style = {styles.container02}>
+                    <div className = 'row'>
+                        <div className='col-md-6' style={{display: 'flex', padding: 54, alignItems: 'center', justifyContent: 'end'}}>
+                            <div style={{ maxWidth: 468}}>
+                                <div style = {{ fontFamily: 'arial', fontSize: 14, fontWeight: 700, fontStyle: 'normal' }}>Tentang Paket</div>
+                                <div style = {{ fontFamily: 'arial', fontSize: 14, fontWeight: 700, fontStyle: 'normal', marginTop: 16 }}>Include</div>
+                               {
+                                includeList.map((item) => (
+                                    <CheckItem text = {item} />
+                                ) )
+                               }
+                               <div style = {{ fontFamily: 'arial', fontSize: 14, fontWeight: 700, fontStyle: 'normal', marginTop: 16 }}>Exclude</div>
+                               {
+                                excludeList.map((item) => (
+                                    <CheckItem text = {item} />
+                                ) )
+                               }
+                              <div style = {{ fontFamily: 'arial', fontSize: 14, fontWeight: 700, fontStyle: 'normal', marginTop: 16 }}>Refund, Reschedule, Overtime</div>
+                              {
+                                excludeList.map((item) => (
+                                    <CheckItem text = {item} />
+                                ) )
+                               }
+                            </div>
                         </div>
-                   
-                )
-            }
+                        <div className='col-md-6'>
+                            {
+                                !!Object.keys(car).length && (
+                                    
+                                    <div style = {{ padding: 10 }}>
+                                    <div class="card" style={{ width: 250 }}>
+                                        <img src ={car.image} alt = "item-image" />
+                                        <div class = "card-body">
+                                            <h5 class = "card-title">{car.name}</h5>
+                                            <p class = "card-text">Total = Rp.{car.price}</p>
+                                        </div>
+                                    </div>
+                                    </div>
+                                )
+                            }
+                        </div>
+                    </div>
+                </div>
             <Footer />
         </div>
     )

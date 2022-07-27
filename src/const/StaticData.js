@@ -70,4 +70,17 @@ const navList = [
     }
 ]
 
-export {CheckItemList, InfoCardList, HeaderList, contactList, navList}
+const includeList = [
+    "Apa saja yang termasuk dalam paket misal durasi max 12 jam", 
+    "Sudah termasuk bensin selama 12 jam", 
+    "Sudah termasuk tiket wisata", 
+    "Sudah termasuk pajak"
+]
+
+const excludeList = [
+    "Tidak termasuk biaya makan sopir Rp. 75.000 / hari",
+    "Jika overtime lebih dari 12 jam akan ada tambahan biaya Rp. 20.000 / jam",
+    "Tidak termasuk akomodasi penginapan"
+]
+
+export {CheckItemList, InfoCardList, HeaderList, contactList, navList, includeList, excludeList}
