@@ -82,8 +82,12 @@ const Home = () => {
                     </div>
                 </div>
             </div>
-            <div id = "testimonial" className='row'>
-                {/* <Testimonial /> */}
+            <div className='row'>
+                <div className='col-12' style={{display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', marginTop: 40, paddingBottom: 10}}>
+                    <div style={{fontFamily: 'arial', fontSize: 24, fontWeight: 700, fontStyle: 'normal'}}>Testimonial</div>
+                    <div style={{fontFamily: 'arial', fontSize: 14, fontWeight: 700, fontStyle: 'normal', marginTop: 16, paddingBottom: 10}}>Berbagai review positif dari para pelanggan kami</div>
+                    <Testimonial />
+                </div>
             </div>
             <div className='row'>
                 <CTA_Banner />
