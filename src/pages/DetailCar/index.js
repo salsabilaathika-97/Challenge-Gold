@@ -7,6 +7,7 @@ import {useEffect, useState} from "react";
 import { Button, Form } from "react-bootstrap";
 import { includeList, excludeList } from "../../const/StaticData";
 import CheckItem from "../../components/CheckItem";
+import { Link } from 'react-router-dom';
 
 const DetailCar = () => {
     const [car, setCar] = useState([]);
@@ -114,6 +115,11 @@ const DetailCar = () => {
                                             <h5 class = "card-title">{car.name}</h5>
                                             <p class = "card-text">Total = Rp.{car.price}</p>
                                         </div>
+                                    </div>
+                                    <div style = {{ padding: 8 }}>
+                                    <Link to = {'/carimobil'}>
+                                        <Button variant = "success">Kembali Cari Mobil</Button>
+                                    </Link>
                                     </div>
                                     </div>
                                 )
