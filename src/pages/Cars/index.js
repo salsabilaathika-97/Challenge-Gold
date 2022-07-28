@@ -9,6 +9,7 @@ import { Link } from "react-router-dom";
 
 const Cars = () => {
     const [data, setData] = useState([]);
+    const [name, setName] = useState("");
 
     useEffect(() => {
         axios
@@ -16,6 +17,17 @@ const Cars = () => {
           .then((res) => setData(res.data))
           .catch((err) => console.log(err));
       }, []);
+
+    const handleChangeName = (e) => {
+        setName(e.target.value)
+    }
+
+    const handleSearch = () => {
+        const newArr = data.filter(e => (
+            e.name == name
+        ))
+    setData(newArr);
+    }  
 
     const styles = {
         container01 : {
@@ -53,7 +65,7 @@ const Cars = () => {
                     <Form className='d-flex flex-direction-row'>
                     <Form.Group controlId="formNamaMobil" style={{marginRight: 16}}>
                         <Form.Label>Nama Mobil</Form.Label>
-                        <Form.Control type="text" placeholder="Ketik nama/tipe mobil" style={{width: 208}}/>
+                        <Form.Control type="text" placeholder="Ketik nama/tipe mobil" style={{width: 208}}  onChange={(e) => handleChangeName(e)} />
                     </Form.Group>
                     <Form.Group controlId="formKategori" style={{marginRight: 16}}>
                         <Form.Label>Kategori</Form.Label>
@@ -75,12 +87,12 @@ const Cars = () => {
                     <Form.Group controlId="formStatus" style={{marginRight: 16}}>
                         <Form.Label>Status</Form.Label>
                         <Form.Select style={{width: 220}}>
-                        <option value="1">{"Disewa"}</option>
-                        <option value="2">{"Belum Disewa"}</option>
+                        <option value="1">{"True"}</option>
+                        <option value="2">{"False"}</option>
                         </Form.Select>
                     </Form.Group>
                     <Form.Group className='d-flex align-items-end'>
-                        <Button as="input" type="button" value="Cari Mobil" variant="success" />
+                        <Button as="input" type="button" value="Cari Mobil" variant="success" onClick={handleSearch} />
                     </Form.Group>
                     </Form>
                 </div>
