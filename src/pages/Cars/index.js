@@ -108,6 +108,7 @@ const Cars = () => {
                                         <img src ={item.image} alt = "item-image" />
                                         <div class = "card-body">
                                             <h5 class = "card-title">{item.name}</h5>
+                                            <p class = "card-text">{item.category}</p>
                                             <p class = "card-text">{item.price}</p>
                                             <Link to = {`/detailmobil/${item.id}`}>
                                                 <Button variant = "success">Pilih Mobil</Button>

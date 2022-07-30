@@ -113,6 +113,7 @@ const DetailCar = () => {
                                         <img src ={car.image} alt = "item-image" />
                                         <div class = "card-body">
                                             <h5 class = "card-title">{car.name}</h5>
+                                            <p class ="card-text">{car.category}</p>
                                             <p class = "card-text">Total = Rp.{car.price}</p>
                                         </div>
                                     </div>
