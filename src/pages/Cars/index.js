@@ -9,6 +9,7 @@ import { Link } from "react-router-dom";
 
 const Cars = () => {
     const [data, setData] = useState([]);
+    const [fdata, setFdata] = useState([]);
     const [name, setName] = useState("");
 
     useEffect(() => {
@@ -24,10 +25,13 @@ const Cars = () => {
 
     const handleSearch = () => {
         const newArr = data.filter(e => (
-            e.name == name
+            e.name === name
         ))
-    setData(newArr);
+    setFdata(newArr);
     }  
+
+    console.log("data data", data);
+    console.log("data fdata", fdata);
 
     const styles = {
         container01 : {
