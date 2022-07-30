@@ -10,6 +10,7 @@ import CarList from "../../components/CarList/CarList";
 const Cars = () => {
     const [data, setData] = useState([]);
     const [fdata, setFdata] = useState([]);
+    const [notFound, setNotFound] = useState(false);
     const [name, setName] = useState("");
 
     useEffect(() => {
@@ -23,14 +24,16 @@ const Cars = () => {
         setName(e.target.value)
         if (!e.target.value.length){
             setFdata([])
+            setNotFound(false);
         }
     }
 
     const handleSearch = () => {
-        const newArr = data.filter(e => (
-            e.name === name
-        ))
-    setFdata(newArr);
+        const newArr = data.filter(e => (e.name === name))
+        if(!newArr.length){
+            setNotFound(true);
+        }
+        setFdata(newArr);
     }  
 
     console.log("data data", data);
@@ -107,6 +110,7 @@ const Cars = () => {
                 <div style = {styles.container02}>
                 <div className='row' style = {{ padding: 10 }}>
                     <div className='col' style={{display: 'flex', flexDirection: 'row', flexWrap: 'wrap', marginTop: 8, marginBottom: 40}}>
+                        {!!notFound && <h1 style = {{ color: "red" }}>Data tidak ditemukan</h1>}
                         <CarList data = {!fdata.length ? data : fdata} />
                     </div>
                 </div>
