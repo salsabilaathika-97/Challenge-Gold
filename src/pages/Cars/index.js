@@ -79,7 +79,7 @@ const Cars = () => {
                     </Form.Group>
                     <Form.Group controlId="formKategori" style={{marginRight: 16}}>
                         <Form.Label>Kategori</Form.Label>
-                        <Form.Select style={{width: 208}}>
+                        <Form.Select style={{width: 208}} disabled>
                         <option value='' hidden>Masukkan Jenis</option>
                         <option value="1">2 - 4 Orang</option>
                         <option value="2">4 - 6 Orang</option>
@@ -88,7 +88,7 @@ const Cars = () => {
                     </Form.Group>
                     <Form.Group controlId="formHarga" style={{marginRight: 16}}>
                         <Form.Label>Harga</Form.Label>
-                        <Form.Select style={{width: 220}}>
+                        <Form.Select style={{width: 220}} disabled>
                         <option value='' hidden>Masukkan Harga Sewa Per Hari</option>
                         <option value="1">{"< Rp. 400.000"}</option>
                         <option value="2">{"Rp. 400.000 - Rp. 600.000"}</option>
@@ -96,7 +96,7 @@ const Cars = () => {
                     </Form.Group>
                     <Form.Group controlId="formStatus" style={{marginRight: 16}}>
                         <Form.Label>Status</Form.Label>
-                        <Form.Select style={{width: 220}}>
+                        <Form.Select style={{width: 220}} disabled>
                         <option value="1">{"True"}</option>
                         <option value="2">{"False"}</option>
                         </Form.Select>
