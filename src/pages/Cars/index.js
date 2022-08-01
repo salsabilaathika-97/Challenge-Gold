@@ -109,7 +109,7 @@ const Cars = () => {
                 </div>
                 <div style = {styles.container02}>
                 <div className='row' style = {{ padding: 10 }}>
-                    <div className='col' style={{display: 'flex', flexDirection: 'row', flexWrap: 'wrap', marginTop: 8, marginBottom: 40}}>
+                    <div className='col' style={{display: 'flex', flexDirection: 'row', flexWrap: 'wrap', marginTop: 8, marginBottom: 40, justifyContent: 'center'}}>
                         {!!notFound && <h1 style = {{ color: "red" }}>Data tidak ditemukan</h1>}
                         <CarList data = {!fdata.length ? data : fdata} />
                     </div>
