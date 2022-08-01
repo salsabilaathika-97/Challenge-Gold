@@ -1,4 +1,4 @@
-import Navbar from "../../components/Navbar";
+import Navigation from "../../components/Navigation";
 import Footer from "../../components/Footer";
 import { colors } from "../../utils";
 import { img_car } from "../../asset";
@@ -54,7 +54,7 @@ const Cars = () => {
     };
     return (
         <div>
-            <Navbar />
+            <Navigation />
             <div style={styles.container01}>
                 <div className='row' style={{margin: 'auto'}}>
                     <div className='col-md-6' style={{display: 'flex', padding: 16, alignItems: 'center', justifyContent: 'end'}}>

@@ -1,5 +1,5 @@
 import React from 'react';
-import Navbar from "../../components/Navbar";
+import Navigation from '../../components/Navigation';
 import Footer from "../../components/Footer";
 import CheckItem from '../../components/CheckItem';
 import InfoCard from '../../components/InfoCard';
@@ -29,7 +29,7 @@ const Home = () => {
 
     return (
         <div>
-            <Navbar />
+            <Navigation />
             <div style={styles.container01}>
                 <div className='row' style={{margin: 'auto'}}>
                     <div className='col-md-6' style={{display: 'flex', padding: 16, alignItems: 'center', justifyContent: 'end'}}>

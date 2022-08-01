@@ -1,4 +1,4 @@
-import Navbar from "../../components/Navbar";
+import Navigation from "../../components/Navigation";
 import Footer from "../../components/Footer";
 import { colors } from "../../utils";
 import { useParams } from "react-router-dom";
@@ -37,7 +37,7 @@ const DetailCar = () => {
 
     return (
         <div>
-            <Navbar />
+            <Navigation />
             <div style={styles.container01}>
             </div>
             <div className="d-flex justify-content-center align-items-center">
