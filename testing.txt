@@ -1,2 +1,4 @@
 Mengetes buat branch fitur dibawah branch development.
 Setelah itu, mau merge ke branch main.
+
+Menambah fitur register
